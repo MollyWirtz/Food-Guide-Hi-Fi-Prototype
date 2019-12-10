@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>About</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no" charset="utf-8"/>
+</head>
+
+<body id="content">
+
+	<!-- Display Content -->
+	<div>
+		<h1 id="title" style="margin-bottom: 10px; padding: 10px; ">About</h1>
+		<p>
+			Food is becoming increasingly complicated. The average person in a grocery store likely does not know what half of the ingredients in the food they are buying are, especially in processed products. The Food Guide aims to educate users on what exactly is in their food purchases quickly and easily. 
+		</p>
+		<h2 class="thanks">Special Thank You To:</h2>
+		<p><a class="link" href="https://www.clipart.email/">clipart.email</a>
+			<br>For use of Garden Vegetables Clipart</p>
+
+			<p><b style="color: #873A5B">Nathaniel Rutkowski</b><br>
+			For inspiration for this application</p>
+
+			<img title="Image from clipart.email" src="https://cdn.clipart.email/76ce89e5868bf328ab9f48ad14647657_vegetable-garden-clipart-familyhouse-co-clipartix_694-393.png" width="350" alt="Garden Vegetables Clipart" id="garden_img" style="margin-top: 10px"/>
+		</div>
+
+		<!-- Navigation Menu -->
+		<span id="open_menu" onclick="toggleMenu()">&#9776;</span>
+			<div id="navMenu" class="overlay">
+			<div class="overlay-content">
+				<button class="menu_item" style="background-color: #575757" onclick="location.href = 'home.html';">Home</button>
+				<button class="menu_item" style="background-color: #B0C980" onclick="location.href = 'profile.html';">My Profile</button>
+				<button class="menu_item" style="background-color: #873A5B" onclick="location.href = 'camera.html';">Scan an Item</button>
+				<button class="menu_item" style="background-color: #E58430" onclick="location.href = 'settings.html';">Settings</button>
+				<button class="menu_item" style="background-color: #D12727" onclick="location.href = 'about.html';">About</button>
+			</div>
+			<span id="close_menu" onclick="toggleMenu()">&#9776;</span>
+		</div>
+		<script src="scriptCode.js"></script>         
+
+	</body>
+	</html>

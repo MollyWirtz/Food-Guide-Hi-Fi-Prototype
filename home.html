@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Food Guide Home</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no" charset="utf-8"/></head>
+
+<body id="content">
+
+	<!-- Display Content -->
+	<div>
+		<br><br><br>
+		<h1 id="title">Food Guide</h1>
+		<h3 id="subtitle">Identify the ingredients in your food!</h3>
+		<a href="camera.html"> <button class="scan_btn">Scan a Product</button></a>
+		<img title="Image from clipart.email" src="https://cdn.clipart.email/76ce89e5868bf328ab9f48ad14647657_vegetable-garden-clipart-familyhouse-co-clipartix_694-393.png" width="350" alt="Garden Vegetables Clipart" id="garden_img"/>
+	</div>
+
+	<!-- Navigation Menu -->
+	<span id="open_menu" onclick="toggleMenu()">&#9776;</span>
+	<div id="navMenu" class="overlay">
+		<div class="overlay-content">
+			<button class="menu_item" style="background-color: #575757" onclick="location.href = 'home.html';">Home</button>
+			<button class="menu_item" style="background-color: #B0C980" onclick="location.href = 'profile.html';">My Profile</button>
+			<button class="menu_item" style="background-color: #873A5B" onclick="location.href = 'camera.html';">Scan an Item</button>
+			<button class="menu_item" style="background-color: #E58430" onclick="location.href = 'settings.html';">Settings</button>
+			<button class="menu_item" style="background-color: #D12727" onclick="location.href = 'about.html';">About</button>
+		</div>
+
+		<span id="close_menu" onclick="toggleMenu()">&#9776;</span>
+	</div>
+	<script src="scriptCode.js"></script> 
+
+
+</body>
+
+</html>

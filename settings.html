@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Settings</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no" charset="utf-8"/>
+</head>
+
+<body id="content">
+
+	<h1 id="title">Settings</h1>
+
+	<!-- Navigation Menu -->
+	<span id="open_menu" onclick="toggleMenu()">&#9776;</span>
+	<div id="navMenu" class="overlay">
+		<div class="overlay-content">
+			<button class="menu_item" style="background-color: #575757" onclick="location.href = 'home.html';">Home</button>
+			<button class="menu_item" style="background-color: #B0C980" onclick="location.href = 'profile.html';">My Profile</button>
+			<button class="menu_item" style="background-color: #873A5B" onclick="location.href = 'camera.html';">Scan an Item</button>
+			<button class="menu_item" style="background-color: #E58430" onclick="location.href = 'settings.html';">Settings</button>
+			<button class="menu_item" style="background-color: #D12727" onclick="location.href = 'about.html';">About</button>
+		</div>
+		<span id="close_menu" onclick="toggleMenu()">&#9776;</span>
+	</div>
+
+	<script src="scriptCode.js"></script>    
+
+</body>
+
+</html>

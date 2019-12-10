@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Detected Ingredients</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no" charset="utf-8"/>
+</head>
+
+<body id="content">
+
+	<!-- Ok Modal -->
+<!-- 	<div class="modal" id="confirm_modal" style="display:block">
+		<div class="modal-content">
+			<p id="modal_title">Alert</p>
+			<p id="modal_subtitle"></p>
+			<a id="ok"><button id="modal_button">Ok</button></a>
+		</div>
+	</div>  -->   
+
+	<div class="detection_overlay">
+		<div class="detection_overlay_content" style="overflow-y: hidden">   
+			<!-- Page Content -->
+			<div> 
+				<h3 style="color: white; margin: 15px; margin-top: 40px">The following ingredients were detected in your image. Would you like to add or remove any items at this time?</h3>
+
+				<!-- Container for Add/Remove Buttons -->
+				<div id="ingredient_box" style="height: 325px">
+					<span id="toggle_container">
+						<button id="enriched_wheat_flour_btn" class="remove" onclick="deleteElt(this.id)"> - </button>
+						<button id="canola_oil_btn" class="remove" onclick="deleteElt(this.id)"> - </button>
+						<button id="palm_oil_btn" class="remove" onclick="deleteElt(this.id)"> - </button>
+						<button id="sugar_btn" class="remove" onclick="deleteElt(this.id)"> - </button>
+						<button id="salt_btn" class="remove" onclick="deleteElt(this.id)"> - </button>
+						<button id="leavening_btn" class="remove" onclick="deleteElt(this.id)"> - </button>
+						<button id="calcium_phosphate_btn" class="remove" onclick="deleteElt(this.id)"> - </button>
+						<button id="baking_soda_btn" class="remove" onclick="deleteElt(this.id)"> - </button>
+						<button id="high_fructose_corn_syrup_btn" class="remove" onclick="deleteElt(this.id)"> - </button>
+						<button id="soy_lechithin_btn" class="remove" onclick="deleteElt(this.id)"> - </button>
+						<button id="natural_flavor_btn" class="remove" onclick="deleteElt(this.id)"> - </button>
+						<button id="add_elt" class="remove" onclick="addElt()"> + </button>
+					</span>
+
+					<!-- Container for Ingrdient Labels -->
+					<span id="label_container">
+						<p id="enriched_wheat_flour" class="ingredient_label">Enriched Wheat Flour</p>
+						<p id="canola_oil" class="ingredient_label">Canola Oil</p>
+						<p id="palm_oil" class="ingredient_label">Palm Oil</p>
+						<p id="sugar" class="ingredient_label">Sugar</p>
+						<p id="salt" class="ingredient_label">Salt</p>
+						<p id="leavening" class="ingredient_label">Leavening</p>
+						<p id="calcium_phosphate" class="ingredient_label">Calcium Phosphate</p>
+						<p id="baking_soda" class="ingredient_label">Baking Soda</p>
+						<p id="high_fructose_corn_syrup" class="ingredient_label">High Fructose Corn Syrup</p>
+						<p id="soy_lechithin" class="ingredient_label">Soy Lecithin</p>
+						<p id="natural_flavor" class="ingredient_label">Natural Flavor</p>
+					</span>
+				</div>
+
+				<a href="identified_ingredients.html"><button class="scan_btn">Identify Ingredients!</button></a>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+
+		// Alert Modal for Flagged Ingredients
+		// var modal = document.getElementById("confirm_modal"); 
+		// var modal_text = document.getElementById("modal_subtitle"); 
+		// var ok = document.getElementById("ok");
+		// var salt =  
+		// // Display modal 
+		// modal.style.display = "block";
+		// modal_text.innerHTML = "The following ingredients have been detected:" + "<br><br>" + "Salt";
+		// ok.onclick = function() {
+		// 	modal.style.display = "none"; 
+		// }
+
+		var count = 0; 
+
+		// Remove Ingredient
+		function deleteElt(clicked_id) {
+			document.getElementById(clicked_id).remove(); 
+			var label_id_split = clicked_id.split("_btn"); 
+			var label_id = label_id_split[0]; 
+			document.getElementById(label_id).remove(); 
+		}
+
+		// Add Ingredient
+		function addElt() {
+			count += 1;
+
+			// Get containers
+			var lbl_container = document.getElementById("label_container"); 
+			var tog_container = document.getElementById("toggle_container"); 
+
+			// If user input into text box
+			if (document.getElementById("input")) {
+				// Get user input
+				var input = document.getElementById("input").value; 
+
+				// If input and + button clicked second time 
+				if ((input != "") && (count > 0)) {
+
+					// Trim space off end of user input 
+					if (input[input.length-1] == " ") {
+						input = input.substring(0, input.length-1); 
+					}
+
+					// Replace all spaces with underscore 
+					var new_btn_id = input.replace(/ /g, "_"); 
+					var new_lbl_id = new_btn_id; 
+					new_btn_id = new_btn_id + "_btn"; 
+
+					// Create new button
+					var new_btn = document.createElement("button"); 
+					new_btn.setAttribute("class", "remove"); 
+					new_btn.setAttribute("id", new_btn_id); 
+					new_btn.textContent = "-"; 
+					new_btn.setAttribute("onclick", "deleteElt(this.id);"); 
+					document.getElementById("add_elt").before(new_btn); 
+
+					// Create new label
+					var new_lbl = document.createElement("p"); 
+					new_lbl.setAttribute("class", "ingredient_label"); 
+					new_lbl.setAttribute("id", new_lbl_id); 
+					new_lbl.textContent = input; 
+					lbl_container.appendChild(new_lbl); 
+					document.getElementById("input").remove(); 
+				}
+			// Create user input text box
+		} else {
+			var prompt = document.createElement("INPUT");
+			prompt.setAttribute("type", "text");
+			prompt.setAttribute("id", "input"); 
+			prompt.style.padding = "8.5px 0px 8.5px 0px";  
+			lbl_container.appendChild(prompt); 
+		}
+	}
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Identified Ingredients</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no" charset="utf-8"/>
+</head>
+
+<body id="content">
+
+	<!-- Displayed Content -->
+	<h1 id="title" style="margin-bottom: 0px; padding-bottom: 0px; ">Identified Ingredients</h1>
+	<h4 style="margin-bottom: 30px;">Click on an ingredient to learn more!</h4>
+
+	<div style="overflow-y: scroll; height: 325px"> 
+
+		<!-- Enriched Wheat Flour -->
+		<span class="inline_btns">
+			<button id="enriched_flour_like" class="heart_black" onclick="like_ingredient(this.id)">&#9829</button>
+			<button class="collapsible_ingredient">Enriched Wheat Flour</button>
+			<div class="content_info">
+				<p class="ingredient_description">
+					Enriched flour is flour with specific nutrients returned to it that have been lost while being prepared. These restored nutrients include iron and B vitamins (folic acid, riboflavin, niacin, and thiamine).
+					<br><br>
+				Once the endosperm is isolated, it is ground into a fine powder and sifted to remove any remaining fragments of bran or germ. Next, a chemical bleaching process is used to give the flour a whiter color. This bleaching step, usually with chlorine or benzoyl peroxide, destroys many of the original nutrients that were present in the flour. The final flour product contains a smaller portion of the original nutrients that were present in the seed prior to processing. Enrichment ensures that these important nutrients are restored to improve the quality of the flour.</p>
+				<p class="link"><a class="link" href="https://en.wikipedia.org/wiki/Enriched_flour">More Info</a></p>
+				<p style="text-align: left"><b>Recipes:</b></p>
+
+				<!-- Recipies -->
+				<div>
+					<!-- Almond Bread -->
+					<span class="horizontal_block">
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/239620/bread-machine-almond-bread/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">
+								<img class="recipie" src="imgs/bread_machine_almond_bread.jpg" style="border-color: #B0C980">
+							</a>
+							<div class="image_overlay">
+								<button id="bread_machine_almond_bread_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Bread Machine Almond Bread</p>
+					</span>
+					<!-- Orange Cake -->
+					<span class="horizontal_block"> 
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/261757/orange-cake-with-semolina-and-almonds/">	
+								<img class="recipie" src="imgs/orange_cake_with_semolina_and_almonds.jpg" style="border-color: #873A5B">
+							</a>
+							<div class="image_overlay">
+								<button id="orange_cake_with_semolina_and_almonds_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Orange Cake with Semolina and Almonds</p>
+					</span>
+					<!-- Beer Bread -->
+					<span class="horizontal_block">
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/237509/gluten-free-beer-bread/?internalSource=hub%20recipe&referringContentType=Search">
+								<img class="recipie" src="imgs/gluten_free_beer_bread.jpg" style="border-color: #E58430">
+							</a>
+							<div class="image_overlay">
+								<button id="gluten_free_beer_bread_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Gluten-Free Beer Bread</p>
+					</span>	
+					<!-- Whole Wheat Bread -->
+					<span class="horizontal_block">
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/6773/simple-whole-wheat-bread/?internalSource=hub%20recipe&referringContentType=Search">
+								<img class="recipie" src="imgs/simple_whole_wheat_bread.jpg" style="border-color: #D12727">
+							</a>
+							<div class="image_overlay">
+								<button id="simple_whole_wheat_bread_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Simple Whole Wheat Bread</p>
+					</span>
+				</div>
+			</div>
+		</span>
+
+		<!-- Canola Oil -->
+		<span class="inline_btns">
+			<button id="canola_oil_like" class="heart_black" onclick="like_ingredient(this.id)">&#9829</button>
+			<button class="collapsible_ingredient">Canola Oil</button>
+			<div class="content_info">
+				<p class="ingredient_description">Canola oil, or canola for short, is a vegetable oil derived from a variety of rapeseed that is low in erucic acid, as opposed to colza oil.
+					<br><br>
+				Canola oil is considered safe for human consumption, and has a relatively low amount of saturated fat, a substantial amount of monounsaturated fat, with roughly a 2:1 mono- to poly-unsaturated fats ratio... In 2006, canola oil was given a qualified health claim by the United States Food and Drug Administration for lowering the risk of coronary heart disease, resulting from its significant content of unsaturated fats.</p>
+				<p class="link"><a class="link" href="https://en.wikipedia.org/wiki/Canola_oil">More Info</a></p>
+				<p style="text-align: left"><b>Recipes:</b></p>
+
+				<!-- Recipes -->
+				<div>
+					<!-- Pear Salad -->
+					<span class="horizontal_block">
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/34613/roquefort-pear-salad/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">
+								<img class="recipie" src="imgs/roquefort_pear_salad.jpg" style="border-color: #B0C980">
+							</a>
+							<div class="image_overlay">
+								<button id="roquefort_pear_salad_like_" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Roquefort Pear Salad</p>	
+					</span>
+					<!-- Cedar Salmon -->
+					<span class="horizontal_block"> 
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/109297/cedar-planked-salmon/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">				
+								<img class="recipie" src="imgs/cedar_planked_salmon.jpg" style="border-color: #873A5B">
+							</a>
+							<div class="image_overlay"> 
+								<button id="cedar_planked_salmon_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Cedar Planked Salmon</p>
+					</span>
+					<!-- Beef Bulgogi -->
+					<span class="horizontal_block">
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/100606/beef-bulgogi/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%202">
+								<img class="recipie" src="imgs/beef_bulgogi.jpg" style="border-color: #E58430">
+							</a>
+							<div class="image_overlay"> 
+								<button id="beef_bulgogi_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Beef Bulgogi</p>
+					</span>	
+					<!-- General Tsao's -->
+					<span class="horizontal_block">
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/91499/general-tsaos-chicken-ii/">
+								<img class="recipie" src="imgs/general_tsao's_chicken_II.jpg" style="border-color: #D12727">
+							</a>
+							<div class="image_overlay"> 
+								<button id="general_tsao's_chicken_II_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">General Tsao's Chicken II</p>
+					</span>
+				</div>
+			</div>
+		</span>
+
+		<!-- Palm Oil -->
+		<span class="inline_btns">
+			<button id="palm_oil_like" class="heart_black" onclick="like_ingredient(this.id)">&#9829</button>
+			<button class="collapsible_ingredient">Palm Oil</button>
+			<div class="content_info">
+				<p class="ingredient_description">Palm oil is an edible vegetable oil derived from the mesocarp (reddish pulp) of the fruit of the oil palms, primarily the African oil palm Elaeis guineensis, and to a lesser extent from the American oil palm Elaeis oleifera and the maripa palm Attalea maripa.
+					<br><br>
+				Contributing significant calories as a source of fat, palm oil is a food staple in many cuisines. On average globally, humans consumed 7.7 kg (17 lb) of palm oil per person in 2015. Although the relationship of palm oil consumption to disease risk has been previously assessed, the quality of the clinical research specifically assessing palm oil effects has been generally poor. Consequently, research has focused on the deleterious effects of palm oil and palmitic acid consumption as sources of saturated fat content in edible oils, leading to conclusions that palm oil and saturated fats should be replaced with polyunsaturated fats in the diet</p>
+				<p class="link"><a class="link" href="imgs/https://en.wikipedia.org/wiki/Palm_oil">More Info</a></p>
+				<p style="text-align: left"><b>Recipes:</b></p>
+
+				<!-- Recipes -->
+				<div>
+					<!-- Palm Salad -->
+					<span class="horizontal_block"> 
+						<div class="button_overlay">	
+							<a href="https://www.allrecipes.com/recipe/43990/hearts-of-palm-salad/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">			
+								<img class="recipie" src="imgs/hearts_of_palm_salad.jpg" style="border-color: #873A5B">
+							</a>
+							<div class="image_overlay"> 
+								<button id="hearts_of_palm_salad_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Hearts of Palm Salad</p>
+					</span>
+					<!-- Palm Dip -->
+					<span class="horizontal_block">
+						<div class="button_overlay">	
+							<a href="https://www.allrecipes.com/recipe/56547/hearts-of-palm-dip/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">
+								<img class="recipie" src="imgs/hearts_of_palm_dip.jpg" style="border-color: #E58430">
+							</a>
+							<div class="image_overlay"> 
+								<button id="hearts_of_palm_dip_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Hearts of Palm Dip</p>
+					</span>	
+					<!-- Palm Ristto -->
+					<span class="horizontal_block">
+						<div class="button_overlay">	
+							<a href="https://www.allrecipes.com/recipe/145053/hearts-of-palm-risotto/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%202">
+								<img class="recipie" src="imgs/hearts_of_palm_risotto.jpg" style="border-color: #D12727">
+							</a>
+							<div class="image_overlay"> 
+								<button id="hearts_of_palm_risotto_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Hearts of Palm Risotto</p>
+					</span>
+					<!-- Pear Salad -->
+					<span class="horizontal_block">
+						<div class="button_overlay">	
+							<a href="https://www.allrecipes.com/recipe/34613/roquefort-pear-salad/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">
+								<img class="recipie" src="imgs/roquefort_pear_salad.jpg" style="border-color: #B0C980">
+							</a>
+							<div class="image_overlay"> 
+								<button id="roquefort_pear_salad_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Roquefort Pear Salad</p>	
+					</span>
+				</div>
+			</div>
+		</span>
+
+		<!-- Sugar -->
+		<span class="inline_btns">
+			<button id=sugar_like" class="heart_black" onclick="like_ingredient(this.id)">&#9829</button>
+			<button class="collapsible_ingredient">Sugar</button>
+			<div class="content_info">
+				<p class="ingredient_description">Sugar is the generic name for sweet-tasting, soluble carbohydrates, many of which are used in food. Simple sugars, also called monosaccharides, include glucose, fructose, and galactose.
+					<br><br>
+				Brown and white granulated sugar are 97% to nearly 100% carbohydrates, respectively, with less than 2% water, and no dietary fiber, protein or fat (table). Brown sugar contains a moderate amount of iron (15% of the Reference Daily Intake in a 100 gram amount, see table), but a typical serving of 4 grams (one teaspoon), would provide 15 calories and a negligible amount of iron or any other nutrient.[84] Because brown sugar contains 5–10% molasses reintroduced during processing, its value to some consumers is a richer flavor than white sugar.</p>
+				<p class="link"><a class="link" href="https://en.wikipedia.org/wiki/Sugar">More Info</a></p>
+				<p style="text-align: left"><b>Recipes:</b></p>
+
+				<!-- Recipes -->
+				<div>
+					<!-- Cracked Sugar Cookies -->
+					<span class="horizontal_block">
+						<div class="button_overlay">	
+							<a href="https://www.allrecipes.com/recipe/9864/cracked-sugar-cookies-i/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">
+								<img class="recipie" src="imgs/cracked_sugar_cookies_I.jpg" style="border-color: #B0C980">
+							</a>
+							<div class="image_overlay"> 
+								<button id="cracked_sugar_cookies_I_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Cracked Sugar Cookies I</p>	
+					</span>
+					<!-- Sugar Coated Pecans -->
+					<span class="horizontal_block"> 
+						<div class="button_overlay">	
+							<a href="https://www.allrecipes.com/recipe/13838/sugar-coated-pecans/">			
+								<img class="recipie" src="imgs/sugar_coated_pecans.jpg" style="border-color: #873A5B">
+							</a>
+							<div class="image_overlay"> 
+								<button id="sugar_coated_pecans_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Sugar Coated Pecans</p>
+					</span>
+					<!-- Soft Sugar Cookies -->
+					<span class="horizontal_block">
+						<div class="button_overlay">	
+							<a href="https://www.allrecipes.com/recipe/15295/soft-sugar-cookies-iv/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%204">
+								<img class="recipie" src="imgs/soft_sugar_cookies_IV.jpg" style="border-color: #E58430">
+							</a>
+							<div class="image_overlay"> 
+								<button id="soft_sugar_cookies_IV_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Soft Sugar Cookies IV</p>
+					</span>	
+					<!-- Strawberry Sugar Cookies -->
+					<span class="horizontal_block">
+						<div class="button_overlay">	
+							<a href="https://www.allrecipes.com/recipe/235942/chewy-strawberry-sugar-cookies/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">
+								<img class="recipie" src="imgs/chewy_strawberry_sugar_cookies.jpg" style="border-color: #D12727">
+							</a>
+							<div class="image_overlay"> 
+								<button id="chewy_strawberry_sugar_cookies_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Chewy Strawberry Sugar Cookies</p>
+					</span>
+				</div>
+			</div>
+		</span>
+
+		<!-- Salt -->
+		<span class="inline_btns">
+			<button id="salt_like" class="heart_black" onclick="like_ingredient(this.id)">&#9829</button>
+			<button class="collapsible_ingredient">Salt</button>
+			<div class="content_info">
+				<p class="ingredient_description">Salt is a mineral consisting primarily of sodium chloride (NaCl), a chemical compound belonging to the larger class of salts; salt in its natural form as a crystalline mineral is known as rock salt or halite.
+					<br><br>
+				Table salt is made up of just under 40% sodium by weight, so a 6 g serving (1 teaspoon) contains about 2,400 mg of sodium. Sodium serves a vital purpose in the human body: via its role as an electrolyte, it helps nerves and muscles to function correctly, and it is one factor involved in the osmotic regulation of water content in body organs (fluid balance). Most of the sodium in the Western diet comes from salt. The habitual salt intake in many Western countries is about 10 g per day, and it is higher than that in many countries in Eastern Europe and Asia. The high level of sodium in many processed foods has a major impact on the total amount consumed. In the United States, 75% of the sodium eaten comes from processed and restaurant foods, 11% from cooking and table use and the rest from what is found naturally in foodstuffs.</p>
+				<p class="link"><a class="link" href="https://en.wikipedia.org/wiki/Salt">More Info</a></p>
+				<p style="text-align: left"><b>Recipes:</b></p>
+
+				<!-- Recipes -->
+				<div>
+					<!-- Salt Roasted Chicken -->
+					<span class="horizontal_block">
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/235171/chef-johns-salt-roasted-chicken/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">
+								<img class="recipie" src="imgs/chef_john's_salt_roasted_chicken.jpg" style="border-color: #B0C980">
+							</a>
+							<div class="image_overlay"> 
+								<button id="chef_john's_salt_roasted_chicken_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Chef John's Salt Roasted Chicken</p>
+					</span>
+					<!-- Rice Krispies -->
+					<span class="horizontal_block"> 
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/239738/the-best-brown-butter-salted-rice-krispies-treats/">
+								<img class="recipie" src="imgs/the_best_brown_sugar_salted_rice_krispies.jpg" style="border-color: #873A5B">
+							</a>
+							<div class="image_overlay"> 
+								<button id="the_best_brown_sugar_salted_rice_krispies_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">The Best Brown Sugar Salted Rice Krispies</p>
+					</span>
+					<!-- Salted Caramel Sauce -->
+					<span class="horizontal_block">
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/229272/salted-caramel-sauce/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%202">
+								<img class="recipie" src="imgs/salted_caramel_sauce.jpg" style="border-color: #E58430">
+							</a>
+							<div class="image_overlay"> 
+								<button id="salted_caramel_sauce_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Salted Caramel Sauce</p>
+					</span>	
+					<!-- Caramel Chocolate Chip Cookies -->
+					<span class="horizontal_block">
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/235458/salted-caramel-chocolate-chip-cookies/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%203">
+								<img class="recipie" src="imgs/salted_caramel_chocolate_chip_cookies.jpg" style="border-color: #D12727">
+							</a>
+							<div class="image_overlay"> 
+								<button id="salted_caramel_chocolate_chip_cookies_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Salted Caramel Chocolate Chip Cookies</p>
+					</span>
+				</div>
+			</div>
+		</span>
+
+		<!-- Leavening -->
+		<span class="inline_btns">
+			<button id="leavening_like" class="heart_black" onclick="like_ingredient(this.id)">&#9829</button>
+			<button class="collapsible_ingredient">Leavening</button>
+			<div class="content_info">
+				<p class="ingredient_description">A leaven /ˈlɛvən/, often called a leavening agent /ˈlɛvənɪŋ/ (and also known as a raising agent), is any one of a number of substances used in doughs and batters that cause a foaming action (gas bubbles) that lightens and softens the mixture.</p>
+				<p class="link"><a class="link" href="https://en.wikipedia.org/wiki/Leavening_agent">More Info</a></p>
+				<p>There were no recipies found for Leavening</p>
+			</div>
+		</span>
+
+		<!-- Calcium Phosphate -->
+		<span class="inline_btns">
+			<button id="calcium_phosphate_like" class="heart_black" onclick="like_ingredient(this.id)">&#9829</button>
+			<button class="collapsible_ingredient">Calcium Phosphate</button>
+			<div class="content_info">
+				<p class="ingredient_description">Calcium phosphate is a family of materials and minerals containing calcium ions (Ca2+) together with inorganic phosphate anions. Some so-called calcium phosphates contain oxide and hydroxide as well. They are white solids of nutritious value.</p>
+				<p class="link"><a class="link" href="https://en.wikipedia.org/wiki/Calcium_phosphate">More Info</a></p>
+				<p>There were no recipies found for Calcium Phosphate</p>
+			</div>
+		</span>
+
+		<!-- Baking Soda -->
+		<span class="inline_btns">
+			<button id="baking_soda_like" class="heart_black" onclick="like_ingredient(this.id)">&#9829</button>
+			<button class="collapsible_ingredient">Baking Soda</button>
+			<div class="content_info">
+				<p class="ingredient_description">Sodium bicarbonate (IUPAC name: sodium hydrogen carbonate), commonly known as baking soda, is a chemical compound with the formula NaHCO3.
+					<br><br>
+				In cooking, baking soda is primarily used in baking as a leavening agent. When it reacts with acid, carbon dioxide is released, which causes expansion of the batter and forms the characteristic texture and grain in pancakes, cakes, quick breads, soda bread, and other baked and fried foods.</p>
+				<p class="link"><a class="link" href="https://en.wikipedia.org/wiki/Sodium_bicarbonate">More Info</a></p>
+				<p style="text-align: left"><b>Recipes:</b></p>
+
+				<!-- Recipes -->
+				<div>
+					<!-- Irresistable Irish Soda Bread -->
+					<span class="horizontal_block">
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/7095/irresistible-irish-soda-bread/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">
+								<img class="recipie" src="imgs/irresistable_irish_soda_bread.jpg" style="border-color: #B0C980">
+							</a>
+							<div class="image_overlay"> 
+								<button id="irresistable_irish_soda_bread_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Irresistible Irish Soda Bread</p>	
+					</span>
+					<!-- Easy Irish Soda Bread -->
+					<span class="horizontal_block"> 
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/16947/amazingly-easy-irish-soda-bread/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">				
+								<img class="recipie" src="imgs/amazingly_easy_irish_soda_bread.jpg" style="border-color: #873A5B">
+							</a>
+							<div class="image_overlay"> 
+								<button id="amazingly_easy_irish_soda_bread_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Amazingly Easy Irish Soda Bread</p>
+					</span>
+					<!-- John's Irish Soda Bread -->
+					<span class="horizontal_block">
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/241738/chef-johns-irish-soda-bread/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">
+								<img class="recipie" src="imgs/chef_john's_irish_soda_bread.jpg" style="border-color: #E58430">
+							</a>
+							<div class="image_overlay"> 
+								<button id="chef_john's_irish_soda_bread_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Chef John's Irish Soda Bread</p>
+					</span>	
+					<!-- Irish Soda Bread -->
+					<span class="horizontal_block">
+						<div class="button_overlay">
+							<a href="https://www.allrecipes.com/recipe/18456/irish-soda-bread/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%206">
+								<img class="recipie" src="imgs/irish_soda_bread.jpg" style="border-color: #D12727">
+							</a>
+							<div class="image_overlay"> 
+								<button id="irish_soda_bread_like" class="recipie_heart_black" onclick="like_recipe(this.id)">&#9829</button>
+							</div>
+						</div>
+						<p class="recipie_title">Irish Soda Bread</p>
+					</span>
+				</div>
+			</div>
+		</span>
+
+		<!-- High Fructose Corn Syrup -->
+		<span class="inline_btns">
+			<button id="high_fructose_corn_syrup_like" class="heart_black" onclick="like_ingredient(this.id)">&#9829</button>
+			<button class="collapsible_ingredient">High Fructose Corn Syrup</button>
+			<div class="content_info">
+				<p class="ingredient_description">High-fructose corn syrup (HFCS), also known as glucose-fructose, isoglucose and glucose-fructose syrup, is a sweetener made from corn starch.
+					<br><br>
+				Health concerns have been raised about a possible relationship between excessive consumption of HFCS and metabolic syndrome, and with regard to manufacturing contaminants. In general, the United States Food and Drug Administration has declared HFCS as a safe ingredient in food manufacturing, and there is no evidence that retail HFCS products contain harmful compounds or cause diseases.</p>
+				<p class="link"><a class="link" href="https://en.wikipedia.org/wiki/High-fructose_corn_syrup">More Info</a></p>
+				<p>There were no recipies found for High Fructose Corn Syrup</p>
+			</div>
+		</span>
+
+		<!-- Soy Lecithin -->
+		<span class="inline_btns">
+			<button id="soy_lecithin_like" class="heart_black" onclick="like_ingredient(this.id)">&#9829</button>
+			<button class="collapsible_ingredient">Soy Lecithin</button>
+			<div class="content_info">
+				<p class="ingredient_description">Lecithin (UK: /ˈlɛsɪθɪn/, US: /ˈlɛsəθɪn/, from the Greek lekithos "yolk") is a generic term to designate any group of yellow-brownish fatty substances occurring in animal and plant tissues which are amphiphilic – they attract both water and fatty substances (and so are both hydrophilic and lipophilic), and are used for smoothing food textures, emulsifying, homogenizing liquid mixtures, and repelling sticking materials.
+					<br><br>
+				The nontoxicity of lecithin leads to its use with food, as an additive or in food preparation. It is used commercially in foods requiring a natural emulsifier or lubricant.</p>
+				<p class="link"><a class="link" href="https://en.wikipedia.org/wiki/Lecithin">More Info</a></p>
+				<p>There were no recipies found for Soy Lecithin</p>
+			</div>
+		</span>
+
+		<!-- Natural Flavor -->
+		<span class="inline_btns">
+			<button id="natural_flavor_like" class="heart_black" onclick="like_ingredient(this.id)">&#9829</button>
+			<button class="collapsible_ingredient">Natural Flavor</button>
+			<div class="content_info">
+				<p class="ingredient_description">Flavor (American English) or flavour (British English; see spelling differences) is the sensory impression of food or other substances, and is determined primarily by the chemical senses of taste and smell.
+					<br><br>
+				Food and beverage companies may require flavors for new products, product line extensions (e.g., low fat versions of existing products), or changes in formula or processing for existing products. In 2011, about US$10.6 billion were generated with the sale of flavors; the majority of the flavors used are consumed in processed and packaged food. </p>
+				<p class="link"><a class="link" href="https://en.wikipedia.org/wiki/Flavor">More Info</a></p>
+				<p>There were no recipies found for Natural Flavor</p>
+			</div>
+		</span>
+	</div>
+
+	<!-- Scan Another Product/Home Button -->
+	<div class="horizontal_block" style="margin-top: 20px; ">
+		<a href="home.html"><button class="scan_btn" style="margin: 5px;">Go Home</button></a>
+		<a href="camera.html"><button class="scan_btn" style="margin: 5px">Scan Another Item</button></a>
+	</div>  
+
+	<!-- Navigation Menu -->
+	<span id="open_menu" onclick="toggleMenu()">&#9776;</span>
+	<div id="navMenu" class="overlay">
+		<div class="overlay-content">
+			<button class="menu_item" style="background-color: #575757" onclick="location.href = 'home.html';">Home</button>
+			<button class="menu_item" style="background-color: #B0C980" onclick="location.href = 'profile.html';">My Profile</button>
+			<button class="menu_item" style="background-color: #873A5B" onclick="location.href = 'camera.html';">Scan an Item</button>
+			<button class="menu_item" style="background-color: #E58430" onclick="location.href = 'settings.html';">Settings</button>
+			<button class="menu_item" style="background-color: #D12727" onclick="location.href = 'about.html';">About</button>
+		</div>
+		<span id="close_menu" onclick="toggleMenu()">&#9776;</span>
+	</div>
+
+	<!-- Collapsable JavaScript -->
+	<script type="text/javascript">
+
+		var coll = document.getElementsByClassName("collapsible_ingredient");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+			coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.maxHeight){
+					content.style.maxHeight = null;
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+				} 
+			});
+		}
+	</script>
+
+	<!-- Imported JavaScript -->
+	<script src="scriptCode.js"></script>
+
+</body>
+
+</html>

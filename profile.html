@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Profile</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no" charset="utf-8"/></head>
+
+<body id="content" style="overflow-y: scroll">
+
+	<!-- Displayed Content -->
+	<h1 id="profile_title">Molly Wirtz</h1>
+	<h3 id="username">mollywirtz123</h3>
+
+
+	<!-- Navigation Menu -->
+	<span id="open_menu" onclick="toggleMenu()">&#9776;</span>
+	<div id="navMenu" class="overlay">
+		<div class="overlay-content">
+			<button class="menu_item" style="background-color: #575757" onclick="location.href = 'home.html';">Home</button>
+			<button class="menu_item" style="background-color: #B0C980" onclick="location.href = 'profile.html';">My Profile</button>
+			<button class="menu_item" style="background-color: #873A5B" onclick="location.href = 'camera.html';">Scan an Item</button>
+			<button class="menu_item" style="background-color: #E58430" onclick="location.href = 'settings.html';">Settings</button>
+			<button class="menu_item" style="background-color: #D12727" onclick="location.href = 'about.html';">About</button>
+		</div>
+		<span id="close_menu" onclick="toggleMenu()">&#9776;</span>
+	</div>
+
+	<script src="scriptCode.js"></script>         
+
+
+	<!-- Edit My Food Preferences Collapsable -->
+	<button class="collapsible" style="background-color: #873A5B">Edit My Food Preferences</button>
+	<div class="pref_content">
+		<!-- Add/Remove Button Container -->
+		<span id="toggle_container_profile">
+			<button id="peanuts_btn" class="remove" onclick="removePreference(this.id)"> - </button>
+			<button id="salt_btn" class="remove" onclick="removePreference(this.id)"> - </button>
+			<button class="remove" id="add" onclick="addElt()"> + </button>
+		</span>
+		<!-- Ingredient Container -->
+		<span class="label_container_profile_i" id="preferences_ingred_section"> 
+			<p style="font-weight: 900">Ingredient</p>
+			<p id="peanuts_label"> Peanuts </p>
+			<p id="salt_label"> Salt </p>
+		</span>
+		<!-- Severity Button Container -->
+		<span id="label_container_profile_s"> 
+			<p style="font-weight: 900">Severity</p>
+			<!-- Peanuts -->
+			<span class="severity_btn_container" id="peanuts_container">
+				<button class="severity_btn_g" id="peanuts_green" onclick="selectSeverity(this.id)"></button>
+				<button class="severity_btn_y" id="peanuts_yellow" onclick="selectSeverity(this.id)"></button>
+				<button class="severity_btn_r"  id="peanuts_red" onclick="selectSeverity(this.id)"></button>
+			</span>
+			<!-- Salt -->
+			<span class="severity_btn_container" id="salt_container">
+				<button class="severity_btn_g" id="salt_green" onclick="selectSeverity(this.id)"></button>
+				<button class="severity_btn_y"  id="salt_yellow" onclick="selectSeverity(this.id)"></button>
+				<button class="severity_btn_r" id="salt_red" onclick="selectSeverity(this.id)"></button>
+			</span>
+		</span>
+	</div>
+
+	<!-- Saved Ingredients Collapsable -->
+	<button class="collapsible" style="background-color: #E58430">Saved Ingredients</button>
+	<div class="pref_content">
+		<!-- Heart Button Container -->
+		<span id="label_container_profile_h">
+			<button id="msg_like" class="heart_red" onclick="unlikeElement(this.id)">&#9829</button>
+			<button id="sodium_nitrate_like" class="heart_red" onclick="unlikeElement(this.id)">&#9829</button>
+		</span>
+		<!-- Ingredient Container -->
+		<span class="label_container_profile_i" id="ingredient_section"> 
+			<p id="msg_label"><a class="link" href="saved_ingredients_msg.html">MSG</a></p>
+			<p id="sodium_nitrate_label"> <a class="link" href="saved_ingredients_sodium_nitrate.html">Sodium Nitrate</a></p>
+		</span>
+	</div>
+
+	<!-- Saved Recipes Collapsable -->
+	<button class="collapsible" style="background-color: #D12727">Saved Recipes</button>
+	<div class="pref_content">
+		<!-- Heart Button Container -->
+		<span id="label_container_profile_h">
+			<button id="sunflower_butter_like" class="heart_red" onclick="unlikeElement(this.id)">&#9829</button>
+			<button id="banana_bread_like" class="heart_red" onclick="unlikeElement(this.id)">&#9829</button>
+			<button id="roasted_potatos_like" class="heart_red" onclick="unlikeElement(this.id)">&#9829</button>
+		</span>
+		<!-- Recipe Container -->
+		<span class="label_container_profile_i" id="recipe_section"> 
+			<p id="sunflower_butter_label">Sunflower Butter</p>
+			<p id="banana_bread_label">Banana Bread</p>
+			<p id="roasted_potatos_label">Roasted Potatoes</p>
+		</span>
+
+		<!-- Recipe Link Container -->
+		<span class="label_container_profile_i"> 
+			<p id="sunflower_butter_link"><a class="link" href="https://www.allrecipes.com/recipe/270135/homemade-sunflower-butter/">Full Recipie</a></p>
+			<p id="banana_bread_link"><a class="link" href="https://www.allrecipes.com/recipe/6687/banana-bread/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%202">Full Recipie</a></p>
+			<p id="roasted_potatos_link"><a class="link" href="https://www.allrecipes.com/recipe/222077/healthier-oven-roasted-potatoes/?internalSource=hub%20recipe&referringContentType=Search">Full Recipie</a></p>
+		</span>
+	</div>
+
+
+	<!-- Yes/No Modal -->
+	<div class="modal" id="confirm_modal" style="display:none">
+		<div class="modal-content">
+			<br>
+			<p id="modal_subtitle"></p>
+
+			<a id="no"><button id="modal_button">No</button></a>
+			<a id="yes"><button id="modal_button">Yes</button></a>
+		</div>
+	</div>
+
+	<!-- Ok Modal -->
+	<div class="modal" id="severity_modal" style="display:none">
+		<div class="modal-content">
+			<br>
+			<p id="severity_modal_subtitle"></p>
+
+			<a id="ok"><button id="modal_button">Ok</button></a>
+		</div>
+	</div>
+
+
+	<script> 
+		// Collapsable JavaScript 
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		for (i = 0; i < coll.length; i++) {
+			coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.maxHeight){
+					content.style.maxHeight = null;
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+				} 
+			});
+		}
+	</script>
+	<script src="profileCode.js"></script>
+
+
+</body>
+
+</html>

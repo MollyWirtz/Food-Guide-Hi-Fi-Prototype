@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html id="camera_html">
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no" charset="utf-8"/>
+</head>
+<body id="camera_body">
+	<img id="complete_view" src="imgs/complete_view.png"/>
+
+	<div class="modal" id="confirm_modal" style="display: none">
+		<div class="modal-content">
+			<p id="modal_title">Image Captured</p>
+			<p id="modal_subtitle">Would you like to use this image?</p>
+			<a id="no"><button id="modal_button">No</button></a>
+			<a id="yes" href="detected_ingredients.html"><button id="modal_button">Yes</button></a>
+		</div>
+	</div>
+
+	<button id="hidden_btn"></button>
+
+
+	<script>
+		var modal = document.getElementById("confirm_modal"); 
+		var btn = document.getElementById("hidden_btn"); 
+		var no = document.getElementById("no"); 
+		var yes = document.getElementById("yes"); 
+
+		no.onclick = function() {
+			modal.style.display = "none"; 
+		}
+
+		btn.onclick = function() {
+			modal.style.display ="block";  
+		}
+	</script>
+
+</body>
+</html>
